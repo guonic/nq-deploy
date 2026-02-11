@@ -3,5 +3,7 @@ FROM python:3.11-slim
 
 RUN pip install --no-cache-dir huggingface_hub[cli]
 
+ENV HF_ENDPOINT=https://hf-mirror.com
+
 ENTRYPOINT ["huggingface-cli"]
 CMD ["--help"]
